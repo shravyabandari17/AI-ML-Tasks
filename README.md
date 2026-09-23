@@ -1,3 +1,6 @@
+# AI-ML-Tasks
+AI and Machine Learning Tasks and Projects
+
 # Task 1: NumPy Fundamentals
 
 ## Introduction
@@ -29,3 +32,4 @@ Install NumPy:
 
 ```bash
 pip install numpy
+```
