@@ -1,0 +1,102 @@
+# Task 4: Data Visualization
+# Name: Bandari Shravya
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv("students.csv")
+
+print("Dataset:")
+print(df)
+
+
+# ==================================================
+# 1. BAR CHART
+# ==================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.bar(df["Name"], df["Marks"])
+
+plt.xlabel("Student Name")
+plt.ylabel("Marks")
+plt.title("Student Marks")
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+plt.show()
+
+
+# Explanation:
+# The bar chart compares the marks obtained by each student.
+# Taller bars represent students with higher marks.
+
+
+# ==================================================
+# 2. LINE CHART
+# ==================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.plot(df["Name"], df["Attendance"], marker="o")
+
+plt.xlabel("Student Name")
+plt.ylabel("Attendance (%)")
+plt.title("Student Attendance")
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+plt.show()
+
+
+# Explanation:
+# The line chart shows the attendance percentage of each student.
+# It helps us observe how attendance changes from one student to another.
+
+
+# ==================================================
+# 3. HISTOGRAM
+# ==================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.hist(df["Marks"], bins=5)
+
+plt.xlabel("Marks")
+plt.ylabel("Number of Students")
+plt.title("Distribution of Student Marks")
+
+plt.tight_layout()
+plt.show()
+
+
+# Explanation:
+# The histogram shows the distribution of student marks.
+# It tells us how many students fall within different marks ranges.
+
+
+# ==================================================
+# 4. SCATTER PLOT
+# ==================================================
+
+plt.figure(figsize=(8, 5))
+
+plt.scatter(df["Attendance"], df["Marks"])
+
+plt.xlabel("Attendance (%)")
+plt.ylabel("Marks")
+plt.title("Attendance vs Marks")
+
+plt.tight_layout()
+plt.show()
+
+
+# Explanation:
+# The scatter plot shows the relationship between attendance and marks.
+# Each point represents one student.
+
+
+print("\nAll four visualizations have been created successfully.")
